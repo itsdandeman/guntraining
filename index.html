@@ -16,6 +16,7 @@
     line-height:1.4;
   }
 
+  /* HEADER */
   header{
     display:flex;
     align-items:center;
@@ -58,12 +59,7 @@
     text-decoration:none;
   }
 
-  /* GENERAL SECTIONS */
-  .section{
-    padding:60px 24px;
-    max-width:1100px;
-    margin:0 auto;
-  }
+  /* CARDS & GENERAL SECTIONS */
   .card{
     background: var(--card);
     color: var(--dark);
@@ -80,24 +76,38 @@
     transform: translateY(0);
   }
 
-  /* INSTRUCTORS SECTION FULL SCREEN */
+  /* INSTRUCTORS SECTION */
   .instructors{
+    position: relative;
     min-height:100vh; /* full viewport height */
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    padding:60px 24px;
     background:
       linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
       url("dessert.png") no-repeat center center;
     background-size:cover;
+    background-attachment: fixed;
     color: #f4f6f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .instructors .content{
+    width:100%;
+    max-width:1100px;
+    padding:60px 24px; /* spacing for cards */
   }
   .instructors .card{display:flex;gap:12px;align-items:center}
   .instructor img{width:84px;height:84px;border-radius:10px;object-fit:cover}
 
   .small{font-size:13px;color:var(--muted)}
   h2{color:#f4f6f8;margin-bottom:20px}
+
+  /* FAQ */
+  .faq{
+    padding:60px 24px;
+    max-width:1100px;
+    margin:0 auto;
+  }
 
   footer{
     margin-top:30px;
@@ -132,29 +142,31 @@
     <a href="tel:+1234567890" class="call-btn">Call Now: (123) 456-7890</a>
   </section>
 
-  <!-- MEET THE INSTRUCTORS -->
-  <section id="instructors" class="section instructors">
-    <h2>Meet the Instructors</h2>
-    <div class="card">
-      <img src="instructor1.jpg" alt="Instructor John Doe">
-      <div>
-        <strong>John Doe</strong>
-        <div class="small">Ex-military, NRA instructor, 10+ years teaching</div>
-        <p class="small">Focuses on safety, fundamentals, and range etiquette.</p>
+  <!-- INSTRUCTORS SECTION -->
+  <section id="instructors" class="instructors">
+    <div class="content">
+      <h2>Meet the Instructors</h2>
+      <div class="card">
+        <img src="instructor1.jpg" alt="Instructor John Doe">
+        <div>
+          <strong>John Doe</strong>
+          <div class="small">Ex-military, NRA instructor, 10+ years teaching</div>
+          <p class="small">Focuses on safety, fundamentals, and range etiquette.</p>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img src="instructor2.jpg" alt="Instructor Jane Smith">
-      <div>
-        <strong>Jane Smith</strong>
-        <div class="small">Certified NRA instructor, defensive tactics expert</div>
-        <p class="small">Specializes in defensive fundamentals and concealed carry training.</p>
+      <div class="card">
+        <img src="instructor2.jpg" alt="Instructor Jane Smith">
+        <div>
+          <strong>Jane Smith</strong>
+          <div class="small">Certified NRA instructor, defensive tactics expert</div>
+          <p class="small">Specializes in defensive fundamentals and concealed carry training.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ SECTION -->
-  <section id="faq" class="section faq">
+  <section id="faq" class="faq">
     <h2>FAQ</h2>
     <div class="card">
       <p><strong>Do I need my own firearm?</strong> Rentals are available. Call to reserve.</p>
