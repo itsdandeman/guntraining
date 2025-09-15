@@ -59,13 +59,6 @@
     text-decoration:none;
   }
 
-  /* DIVIDER */
-  .divider {
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
-  }
-
   /* CARDS & GENERAL SECTIONS */
   .card{
     background: var(--card);
@@ -106,15 +99,17 @@
   .instructors .card{display:flex;gap:12px;align-items:center}
   .instructor img{width:84px;height:84px;border-radius:10px;object-fit:cover}
 
-  .small{font-size:13px;color:var(--muted)}
-  h2{color:#f4f6f8;margin-bottom:20px}
-
-  /* FAQ */
+  /* FAQ SECTION */
   .faq{
+    background:#111; /* dark background */
+    color:#f4f6f8;
     padding:60px 24px;
     max-width:1100px;
     margin:0 auto;
   }
+
+  .small{font-size:13px;color:var(--muted)}
+  h2{color:#f4f6f8;margin-bottom:20px}
 
   footer{
     margin-top:30px;
@@ -134,7 +129,7 @@
 </head>
 <body>
   <header>
-    <img src="LOGO.png" alt="Frontline Firearms Training logo" />
+    <img src="training-team.png" alt="Frontline Firearms Training logo" />
     <nav>
       <a href="#instructors">Instructors</a>
       <a href="#faq">FAQ</a>
@@ -149,8 +144,10 @@
     <a href="tel:+1234567890" class="call-btn">Call Now: (123) 456-7890</a>
   </section>
 
-  <!-- DIVIDER FOR SMOOTH TRANSITION -->
-  <div class="divider"></div>
+  <!-- CURVED WAVE DIVIDER -->
+  <svg viewBox="0 0 1440 100" style="display:block; width:100%; margin-bottom:-1px;">
+    <path fill="#1a1a1a" d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z"></path>
+  </svg>
 
   <!-- INSTRUCTORS SECTION -->
   <section id="instructors" class="instructors">
