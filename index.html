@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Frontline Firearms Training — Call to Learn More</title>
+<title>Frontline Firearms Training — Call Now</title>
 <meta name="description" content="Frontline Firearms Training offers safety-first courses with certified instructors. Call to learn more." />
 <style>
   :root{--accent:#0b5;--dark:#f4f6f8;--muted:#ccc;--card:#1a1a1a}
@@ -11,21 +11,57 @@
   body{
     margin:0;
     font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-    background:
-      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url("target-range.png") no-repeat center center fixed;
-    background-size: cover;
     color: var(--dark);
     line-height:1.4;
   }
-  .container{max-width:1100px;margin:0 auto;padding:24px}
-  header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 24px;
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.6);
+    z-index:1000;
+  }
   header img{height:48px}
-  .hero{padding:60px 0;text-align:center;color:#f4f6f8}
-  .hero h1{font-size:36px;margin-bottom:16px}
-  .hero p{font-size:18px;max-width:700px;margin:0 auto 24px;color:var(--muted)}
-  .btn{background:var(--accent);color:#002;border:none;padding:14px 20px;border-radius:10px;font-weight:600;cursor:pointer;font-size:18px;text-decoration:none;display:inline-block}
-  .instructors, .faq{margin:40px 0}
+  header a{color:#f4f6f8;text-decoration:none;font-weight:600}
+  
+  /* HERO SECTION */
+  .hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url("target-range.png") no-repeat center center fixed;
+    background-size:cover;
+    padding:0 24px;
+    color:#f4f6f8;
+  }
+  .hero h1{font-size:48px;margin-bottom:16px}
+  .hero p{font-size:20px;max-width:700px;margin:0 auto 24px;color:var(--muted)}
+  .hero .call-btn{
+    display:inline-block;
+    background:var(--accent);
+    color:#002;
+    padding:16px 24px;
+    font-size:20px;
+    font-weight:600;
+    border-radius:12px;
+    text-decoration:none;
+  }
+  
+  /* SECTIONS BELOW HERO */
+  .section{
+    padding:60px 24px;
+    max-width:1100px;
+    margin:0 auto;
+  }
   .card{
     background: var(--card);
     color: var(--dark);
@@ -37,63 +73,71 @@
   .instructors .card{display:flex;gap:12px;align-items:center}
   .instructor img{width:84px;height:84px;border-radius:10px;object-fit:cover}
   .small{font-size:13px;color:var(--muted)}
-  footer{margin-top:30px;padding:18px 0;border-top:1px solid #333;color:var(--muted);font-size:13px;text-align:center}
+  h2{color:#f4f6f8;margin-bottom:20px}
+  
+  footer{
+    margin-top:30px;
+    padding:18px 0;
+    border-top:1px solid #333;
+    color:var(--muted);
+    font-size:13px;
+    text-align:center;
+  }
+  
   @media(max-width:900px){
     .instructors .card{flex-direction:column;align-items:flex-start}
+    .hero h1{font-size:36px}
+    .hero p{font-size:18px}
   }
 </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="LOGO.png" alt="Frontline Firearms Training logo" />
+  <header>
+    <img src="LOGO.png" alt="Frontline Firearms Training logo" />
+    <a href="tel:+1234567890">Call: (123) 456-7890</a>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Frontline Firearms Training</h1>
+    <p>Safety-first firearms training for beginners to advanced learners. Small classes, certified instructors, and live-fire range experience.</p>
+    <a href="tel:+1234567890" class="call-btn">Call Now: (123) 456-7890</a>
+  </section>
+
+  <!-- MEET THE INSTRUCTORS -->
+  <section class="section instructors">
+    <h2>Meet the Instructors</h2>
+    <div class="card">
+      <img src="instructor1.jpg" alt="Instructor John Doe">
       <div>
-        <a href="tel:+1234567890" class="small">Call: (123) 456-7890</a>
+        <strong>John Doe</strong>
+        <div class="small">Ex-military, NRA instructor, 10+ years teaching</div>
+        <p class="small">Focuses on safety, fundamentals, and range etiquette.</p>
       </div>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <h1>Frontline Firearms Training</h1>
-      <p>Safety-first firearms training for beginners to advanced learners. Our certified instructors provide small, hands-on classes with live-fire range experience. Learn the fundamentals of safe handling, defensive techniques, and marksmanship.</p>
-      <a href="tel:+1234567890" class="btn">Call Now: (123) 456-7890</a>
-    </section>
-
-    <!-- MEET THE INSTRUCTORS -->
-    <section class="instructors">
-      <h2 style="color:#f4f6f8">Meet the Instructors</h2>
-      <div class="card">
-        <img src="instructor1.jpg" alt="Instructor John Doe">
-        <div>
-          <strong>John Doe</strong>
-          <div class="small">Ex-military, NRA instructor, 10+ years teaching</div>
-          <p class="small">Focuses on safety, fundamentals, and range etiquette.</p>
-        </div>
+    </div>
+    <div class="card">
+      <img src="instructor2.jpg" alt="Instructor Jane Smith">
+      <div>
+        <strong>Jane Smith</strong>
+        <div class="small">Certified NRA instructor, defensive tactics expert</div>
+        <p class="small">Specializes in defensive fundamentals and concealed carry training.</p>
       </div>
-      <div class="card">
-        <img src="instructor2.jpg" alt="Instructor Jane Smith">
-        <div>
-          <strong>Jane Smith</strong>
-          <div class="small">Certified NRA instructor, defensive tactics expert</div>
-          <p class="small">Specializes in defensive fundamentals and concealed carry training.</p>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- FAQ SECTION -->
-    <section class="faq">
-      <h2 style="color:#f4f6f8">FAQ</h2>
-      <div class="card">
-        <p><strong>Do I need my own firearm?</strong> Rentals are available. Call to reserve.</p>
-        <p><strong>Age limit?</strong> 21+ for live-fire courses. Contact us for youth classes with a guardian present.</p>
-        <p><strong>Refunds?</strong> Full refund if canceled 72+ hours before class.</p>
-      </div>
-    </section>
+  <!-- FAQ SECTION -->
+  <section class="section faq">
+    <h2>FAQ</h2>
+    <div class="card">
+      <p><strong>Do I need my own firearm?</strong> Rentals are available. Call to reserve.</p>
+      <p><strong>Age limit?</strong> 21+ for live-fire courses. Contact us for youth classes with a guardian present.</p>
+      <p><strong>Refunds?</strong> Full refund if canceled 72+ hours before class.</p>
+    </div>
+  </section>
 
-    <footer>
-      © <span id="year"></span> Frontline Firearms Training — All rights reserved
-    </footer>
-  </div>
+  <footer>
+    © <span id="year"></span> Frontline Firearms Training — All rights reserved
+  </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
