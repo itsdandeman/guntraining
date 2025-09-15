@@ -77,13 +77,13 @@
     transform: translateY(0);
   }
 
-  /* INSTRUCTORS SECTION */
+  /* INSTRUCTORS SECTION WITH BLENDED TOP */
   .instructors{
     position: relative;
     min-height:100vh;
-    /* Add a black gradient overlay on top of finaldessert.png for smooth blend */
+    /* gradient fades from hero section into finaldessert.png */
     background:
-      linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)),
+      linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.6) 100%),
       url("finaldessert.png") no-repeat center center;
     background-size:cover;
     background-attachment: fixed;
@@ -200,4 +200,3 @@
 </script>
 </body>
 </html>
-
