@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Frontline Firearms Training — Beginner to Advanced Courses</title>
+<meta name="description" content="Safety-first firearms training: basic, defensive, & concealed carry. Certified instructors. Small classes. Book now." />
+<style>
+  :root{--accent:#0b5;--dark:#0b1320;--muted:#6b7280;--card:#fff}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:#f4f6f8;color:var(--dark);line-height:1.4}
+  .container{max-width:1100px;margin:0 auto;padding:24px}
+  header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+  header img{height:48px}
+  .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;padding:28px 0}
+  .hero h1{font-size:28px;margin:0 0 8px}
+  .lead{color:var(--muted);margin-bottom:16px}
+  .cta{display:flex;gap:10px}
+  .btn{background:var(--accent);color:#002;border:none;padding:12px 16px;border-radius:10px;font-weight:600;cursor:pointer}
+  .btn.ghost{background:transparent;border:2px solid #ddd;color:var(--dark)}
+  .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,12,0.06)}
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}
+  .feature{padding:12px;border-radius:8px;background:#fff}
+  .instructors{display:flex;gap:12px;align-items:center;margin:18px 0}
+  .instructor img{width:84px;height:84px;border-radius:10px;object-fit:cover}
+  form input, form textarea{width:100%;padding:10px;margin:6px 0;border:1px solid #e4e7eb;border-radius:8px}
+  .small{font-size:13px;color:var(--muted)}
+  footer{margin-top:30px;padding:18px 0;border-top:1px solid #e6e8eb;color:var(--muted);font-size:13px}
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;gap:18px}
+    .features{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:520px){
+    .features{grid-template-columns:1fr}
+    header img{height:40px}
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="LOGO.png" alt="Frontline Firearms Training logo" />
+      <div>
+        <a href="tel:+1234567890" class="small">Call: (123) 456-7890</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Safety-first firearms training for all levels</h1>
+        <p class="lead">Certified instructors • Small classes • Live-fire range sessions. Learn safe handling, marksmanship, and defensive fundamentals.</p>
+
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <strong>Next available: Sat, Oct 4 • Limited to 8 people</strong>
+            <div class="small">30 spots left</div>
+          </div>
+          <p class="small" style="margin:10px 0 0">Two options: Basic Safety (4 hrs) or Defensive Fundamentals (8 hrs). Equipment rental available.</p>
+        </div>
+
+        <div style="margin-top:16px" class="cta">
+          <button class="btn" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">Book a Spot</button>
+          <a class="btn ghost" href="#pricing">View Pricing</a>
+        </div>
+
+        <div class="features" aria-hidden="true" style="margin-top:16px">
+          <div class="feature">
+            <strong>Certified Instructors</strong>
+            <p class="small">NRA, state permit, & tactical experience.</p>
+          </div>
+          <div class="feature">
+            <strong>Small Classes</strong>
+            <p class="small">Hands-on coaching — max 8 students per class.</p>
+          </div>
+          <div class="feature">
+            <strong>Range Access</strong>
+            <p class="small">Indoor/outdoor range partner, live-fire drills.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Quick sign up</h3>
+          <form id="lead-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="return handleFormSubmit(event)">
+            <input name="name" id="name" placeholder="Full name" required />
+            <input name="email" id="email" placeholder="Email" type="email" required />
+            <input name="phone" id="phone" placeholder="Phone" />
+            <label class="small" for="package">Choose a course</label>
+            <select name="package" id="package">
+              <option>Basic Safety — 4 hrs</option>
+              <option>Defensive Fundamentals — 8 hrs</option>
+              <option>Concealed Carry — 6 hrs</option>
+            </select>
+            <label class="small" style="display:block;margin-top:6px"><input type="checkbox" id="agree" required /> I confirm I am 21+ and will follow range rules.</label>
+            <button class="btn" type="submit" style="width:100%;margin-top:10px">Request Booking</button>
+            <p class="small" style="margin-top:8px">We’ll reply by email with available dates, waiver, and payment link.</p>
+          </form>
+        </div>
+
+        <div style="margin-top:12px" class="card small">
+          <strong>Have questions?</strong>
+          <p style="margin:6px 0">Call (123) 456-7890 or email <a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="instructors">
+      <h2>Meet the instructors</h2>
+      <div class="instructors card">
+        <img src="instructor1.jpg" alt="Instructor John Doe">
+        <div>
+          <strong>John Doe</strong>
+          <div class="small">Ex-military, NRA instructor, 10+ years teaching</div>
+          <p class="small">Focus on safety, fundamentals, and range etiquette.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" style="margin-top:18px">
+      <h2>Pricing & packages</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div class="card" style="flex:1;min-width:220px">
+          <h3>Basic Safety</h3>
+          <p class="small">$99 • 4 hours • Range intro + safety</p>
+        </div>
+        <div class="card" style="flex:1;min-width:220px">
+          <h3>Defensive Fundamentals</h3>
+          <p class="small">$189 • 8 hours • Movement, drawing, defensive drills</p>
+        </div>
+        <div class="card" style="flex:1;min-width:220px">
+          <h3>Concealed Carry</h3>
+          <p class="small">$149 • 6 hours • Legal overview + practical range time</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" style="margin-top:18px">
+      <h2>FAQ</h2>
+      <div class="card">
+        <p><strong>Do I need my own firearm?</strong> Rentals available. Call to reserve.</p>
+        <p><strong>Age limit?</strong> 21+ for live-fire courses. Under 21: contact us for youth classes with guardian present.</p>
+        <p><strong>Refunds?</strong> See our policy — cancellations 72+ hours before class get full refund.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>© <span id="year"></span> Frontline Firearms Training — All rights reserved</div>
+        <div>
+          <a href="#" class="small">Privacy</a> · <a href="#" class="small">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function handleFormSubmit(e){
+    // basic UX: prevent double submits, show message (you can adapt to use fetch)
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    // Let the form proceed normally to Formspree (or you can use fetch to your backend)
+    setTimeout(()=>{ btn.textContent = 'Request Booking'; btn.disabled = false }, 4000);
+    return true;
+  }
+</script>
+</body>
+</html>
