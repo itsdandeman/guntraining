@@ -8,6 +8,9 @@
 <style>
   :root{--accent:#0b5;--dark:#f4f6f8;--muted:#ccc;--card:#1a1a1a}
   *{box-sizing:border-box}
+  html{
+    scroll-behavior: smooth; /* enables smooth scrolling */
+  }
   body{
     margin:0;
     font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
@@ -26,7 +29,7 @@
     z-index:1000;
   }
   header img{height:48px}
-  header a{color:#f4f6f8;text-decoration:none;font-weight:600}
+  header a{color:#f4f6f8;text-decoration:none;font-weight:600;margin-left:16px}
   
   /* HERO SECTION */
   .hero{
@@ -94,7 +97,11 @@
 <body>
   <header>
     <img src="LOGO.png" alt="Frontline Firearms Training logo" />
-    <a href="tel:+1234567890">Call: (123) 456-7890</a>
+    <nav>
+      <a href="#instructors">Instructors</a>
+      <a href="#faq">FAQ</a>
+      <a href="tel:+1234567890">Call Now</a>
+    </nav>
   </header>
 
   <!-- HERO SECTION -->
@@ -105,7 +112,7 @@
   </section>
 
   <!-- MEET THE INSTRUCTORS -->
-  <section class="section instructors">
+  <section id="instructors" class="section instructors">
     <h2>Meet the Instructors</h2>
     <div class="card">
       <img src="instructor1.jpg" alt="Instructor John Doe">
@@ -126,7 +133,7 @@
   </section>
 
   <!-- FAQ SECTION -->
-  <section class="section faq">
+  <section id="faq" class="section faq">
     <h2>FAQ</h2>
     <div class="card">
       <p><strong>Do I need my own firearm?</strong> Rentals are available. Call to reserve.</p>
