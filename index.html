@@ -14,6 +14,7 @@
     font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
     color: var(--dark);
     line-height:1.4;
+    background:#000; /* ensures bottom space is black */
   }
 
   /* HEADER */
@@ -101,7 +102,7 @@
 
   /* FAQ SECTION */
   .faq{
-    background:#000011; /* dark bluish black */
+    background:#000; /* full black background */
     color:#f4f6f8;
     padding:60px 24px;
     max-width:1100px;
@@ -112,12 +113,17 @@
   h2{color:#f4f6f8;margin-bottom:20px}
 
   footer{
-    margin-top:30px;
+    margin-top:0;
     padding:18px 0;
-    border-top:1px solid #333;
+    border-top:1px solid #111;
     color:var(--muted);
     font-size:13px;
     text-align:center;
+  }
+
+  /* Divider (fully dark) */
+  .divider svg path{
+    fill:#000011; /* fully dark bluish-black */
   }
 
   @media(max-width:900px){
@@ -144,10 +150,12 @@
     <a href="tel:+1234567890" class="call-btn">Call Now: (123) 456-7890</a>
   </section>
 
-  <!-- CURVED WAVE DIVIDER (Dark Bluish Black) -->
-  <svg viewBox="0 0 1440 100" style="display:block; width:100%; margin-bottom:-1px;">
-    <path fill="#000022" d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z"></path>
-  </svg>
+  <!-- CURVED WAVE DIVIDER (fully dark) -->
+  <div class="divider">
+    <svg viewBox="0 0 1440 100" style="display:block; width:100%; margin-bottom:-1px;">
+      <path d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z"></path>
+    </svg>
+  </div>
 
   <!-- INSTRUCTORS SECTION -->
   <section id="instructors" class="instructors">
