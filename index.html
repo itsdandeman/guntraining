@@ -135,7 +135,7 @@
     min-height:100vh;
     background:
       linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.6) 100%),
-      url("finaldessert.png") no-repeat center center;
+      url("finaldessert.png") no-repeat center center fixed;
     background-size:cover;
     background-attachment: fixed;
     color: #f4f6f8;
@@ -159,7 +159,7 @@
     border-radius:10px;
     object-fit:cover;
     object-position: top;
-}
+  }
 
   /* FAQ SECTION */
   .faq{
@@ -191,6 +191,9 @@
     .service-grid .card { padding: 18px; }
     .gallery-grid img { height:220px; }
     .gallery-grid { grid-template-columns: 1fr; }
+    /* fix mobile backgrounds */
+    .hero,
+    .instructors { background-attachment: scroll; }
   }
 </style>
 </head>
@@ -269,13 +272,13 @@
       <div class="card">
         <div class="instructor">
           <img src="rubio_shotgun.png" alt="Instructor Rubio Fimbres">
-  </div>
-  <div>
-    <strong>Rubio Fimbres</strong>
-    <div class="small">Over 10 years of shooting and range experience</div>
-    <p class="small">Dedicated to helping new shooters build safe and confident firearm skills.</p>
-  </div>
-</div>
+        </div>
+        <div>
+          <strong>Rubio Fimbres</strong>
+          <div class="small">Over 10 years of shooting and range experience</div>
+          <p class="small">Dedicated to helping new shooters build safe and confident firearm skills.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -313,5 +316,3 @@
 </script>
 </body>
 </html>
-
-
