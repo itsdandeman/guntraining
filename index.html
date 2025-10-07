@@ -21,7 +21,7 @@
  header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; /* logo bottom */
+  align-items: flex-end; /* logo bottom aligned */
   padding: 8px 24px;
   position: fixed;
   width: 100%;
@@ -39,7 +39,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 8px; /* same bottom as logo */
+  bottom: 8px;
 }
 
 .header-center h1 {
@@ -51,7 +51,7 @@
 .header-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .call-btn-header {
@@ -65,34 +65,60 @@
   text-decoration: none;
 }
 
+/* Mobile navigation */
+.nav-links {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color:#f4f6f8;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #f4f6f8;
+  display: block;
+}
+
+/* Mobile adjustments */
+@media (max-width: 700px) {
+  .header-right {
+    gap: 8px;
+  }
+
   .nav-links {
-    display: flex;
-    gap: 16px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-links li a {
-    color:#f4f6f8;
-    text-decoration:none;
-    font-weight:600;
-  }
-
-  /* Hamburger menu */
-  .menu-toggle {
-    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
     flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-    margin-right: 12px;
+    align-items: center;
+    background: rgba(0,0,0,0.95);
+    display: none;
   }
-  .menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #f4f6f8;
-    display: block;
+
+  .nav-links.active {
+    display: flex;
   }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
 
   /* HERO SECTION */
   .hero{
@@ -294,20 +320,23 @@
   </div>
 
   <div class="header-right">
-    <a href="tel:+15208403027" class="call-btn-header">Call Now: +1 (520) 840-3027</a>
-    <div class="menu-toggle" id="mobile-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#instructors">Instructors</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ul>
+    <a href="tel:+15208403027" class="call-btn-header">Call Now</a>
+    <nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#instructors">Instructors</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
+
 
 
   <!-- HERO SECTION -->
@@ -346,4 +375,5 @@
 </script>
 </body>
 </html>
+
 
