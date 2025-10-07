@@ -30,33 +30,20 @@
     z-index: 1000;
   }
 
+  .logo-container {
+    display: flex;
+    align-items: flex-end;
+  }
+
   .logo-container img {
     height: 64px;
     width: auto;
   }
 
-  .site-title {
-    flex: 1;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #f4f6f8;
-  }
-
-  .call-btn-header {
-    background: var(--accent);
-    color: #002;
-    padding: 12px 20px;
-    font-weight: 600;
-    border-radius: 10px;
-    text-decoration: none;
-    margin-right: 16px;
-    white-space: nowrap;
-  }
-
   nav {
     display: flex;
     align-items: center;
+    gap: 24px;
   }
 
   .nav-links {
@@ -73,12 +60,12 @@
     font-weight:600;
   }
 
+  /* Hamburger menu */
   .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
-    margin-left: 12px;
   }
   .menu-toggle span {
     width: 25px;
@@ -89,68 +76,77 @@
 
   /* HERO SECTION */
   .hero {
-  min-height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* top align */
-  align-items: center;
-  text-align: center;
-  background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url("range_image.JPG") no-repeat center top fixed;
-  background-size: cover;
-  padding: 24px 24px 80px; /* top padding */
-  color:#f4f6f8;
-}
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background:
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url("range_image.JPG") no-repeat center top fixed;
+    background-size: cover;
+    padding: 100px 24px 40px;
+    color:#f4f6f8;
+  }
+
   .hero-top h1 {
-  font-size: 2rem;
-  margin-bottom: 12px;
-}
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
   .hero-top p {
-  font-size: 1.1rem;
-  margin-bottom: 16px;
-}
-
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
   .hero .call-btn {
-  margin-bottom: 24px;
-}
+    display:inline-block;
+    background:var(--accent);
+    color:#002;
+    padding:12px 20px;
+    font-size:16px;
+    font-weight:600;
+    border-radius:12px;
+    text-decoration:none;
+    margin-bottom:24px;
+  }
 
+  /* COMMON ISSUES HIGHLIGHT */
   .common-issues-highlight {
-  display: flex;
-  justify-content: center;
-  padding: 24px;
-  background: #111;
-}
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    background: #111;
+  }
 
-.issues-card {
-  background: var(--card);
-  color: var(--dark);
-  padding: 32px;
-  border-radius: 16px;
-  max-width: 1000px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
-}
+  .issues-card {
+    background: var(--card);
+    color: var(--dark);
+    padding: 32px;
+    border-radius: 16px;
+    max-width: 1000px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  }
 
-.issues-card h2 {
-  font-size: 2rem;
-  margin-bottom: 16px;
-}
+  .issues-card h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
 
-.issues-card ul {
-  text-align: left;
-  margin: 16px 0;
-  padding-left: 20px;
-}
+  .issues-card ul {
+    text-align: left;
+    margin: 16px 0;
+    padding-left: 20px;
+  }
 
-.issues-card ul li {
-  margin-bottom: 12px;
-  font-size: 1rem;
-}
+  .issues-card ul li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+  }
 
-.issues-card a {
-  color: var(--accent);
-  text-decoration: underline;
-}
+  .issues-card a {
+    color: var(--accent);
+    text-decoration: underline;
+  }
 
   /* CARDS & GENERAL SECTIONS */
   .card{
@@ -169,34 +165,9 @@
     transform: translateY(0);
   }
 
-  /* COMMON ISSUES & SOLUTIONS */
-  .issues, .solutions {
-    background:#070707;
-    color:#f4f6f8;
-    padding:60px 24px;
-    text-align:center;
-  }
-  .issues h2, .solutions h2 {
-    font-size:2rem;
-    margin-bottom:20px;
-  }
-  .issues-grid, .solutions-grid {
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    max-width:1000px;
-    margin:0 auto;
-  }
-  .issues-grid .card, .solutions-grid .card {
-    background: var(--card);
-    padding:18px;
-    border-radius:12px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.6);
-  }
-
   /* SERVICES SECTION */
   .services {
-    background: #000;
+    background: #070707;
     color: #f4f6f8;
     padding: 80px 24px;
     display: flex;
@@ -207,35 +178,16 @@
   .services h2 { font-size: 2.1rem; margin-bottom: 12px; }
   .services .small { color: var(--muted); margin-bottom: 28px; }
   .service-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:20px; width:100%; }
-  .service-grid .card { background: var(--card); padding: 22px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.6);}
-  .service-grid .card h3 { margin-top:0; margin-bottom:8px; }
-  .service-grid .card p.small { margin: 8px 0 12px; color: var(--muted); font-size:0.95rem; }
+  .service-grid .card { padding: 22px; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
   .service-grid .card:hover { transform: translateY(-6px); box-shadow: 0 10px 28px rgba(0,0,0,0.75); }
-  .service-grid .card { opacity:0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-  .service-grid .card.show { opacity:1; transform: translateY(0); }
 
   /* GALLERY SECTION */
   .gallery { background: #000; color: #f4f6f8; padding: 80px 24px; display:flex; flex-direction:column; align-items:center; }
   .gallery .content { max-width: 1200px; width: 100%; text-align:center; }
   .gallery h2 { font-size: 2.2rem; margin-bottom:12px; }
   .gallery p.small { margin-bottom:40px; color:var(--muted); }
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    gap: 20px;
-    width: 100%;
-  }
-  .gallery-grid img {
-    width:100%;
-    height:280px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity:0;
-    transform: translateY(30px);
-  }
+  .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 20px; width: 100%; }
+  .gallery-grid img { width:100%; height:280px; object-fit: cover; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.6); opacity:0; transform: translateY(30px); transition: transform 0.3s ease, box-shadow 0.3s ease; }
   .gallery-grid img.show { opacity:1; transform: translateY(0); }
   .gallery-grid img:hover { transform: scale(1.04); box-shadow:0 6px 18px rgba(0,0,0,0.8); }
 
@@ -259,16 +211,8 @@
     max-width:1100px;
     padding:60px 24px;
   }
-  .instructors .card{
-    display:flex;gap:12px;align-items:center
-  }
-  .instructor img{
-    width:84px;
-    height:84px;
-    border-radius:10px;
-    object-fit:cover;
-    object-position: top;
-  }
+  .instructors .card{ display:flex;gap:12px;align-items:center }
+  .instructor img{ width:84px; height:84px; border-radius:10px; object-fit:cover; object-position: top; }
 
   /* FAQ SECTION */
   .faq{
@@ -291,17 +235,17 @@
     text-align:center;
   }
 
-  /* MOBILE */
   @media(max-width:900px){
     .instructors .card{flex-direction:column;align-items:flex-start}
-    .hero h1{font-size:36px}
-    .hero p{font-size:18px}
+    .hero-top h1{font-size:1.5rem}
+    .hero-top p{font-size:1rem}
   }
   @media (max-width:700px){
     .service-grid .card { padding: 18px; }
     .gallery-grid img { height:220px; }
     .gallery-grid { grid-template-columns: 1fr; }
 
+    /* Mobile navigation */
     .nav-links {
       position: absolute;
       top: 100%;
@@ -312,21 +256,24 @@
       align-items: center;
       display: none;
     }
-    .nav-links.active { display:flex; }
-    .nav-links li { margin:12px 0; }
-    .menu-toggle { display:flex; }
+    .nav-links.active { display: flex; }
+    .nav-links li { margin: 12px 0; }
 
-    .hero, .instructors { background-attachment: scroll; background-size: cover; }
+    /* Fix mobile background images */
+    .hero, .instructors {
+      background-attachment: scroll;
+      background-size: cover;
+    }
+
+    .menu-toggle { display: flex; }
   }
 </style>
 </head>
 <body>
 <header>
   <div class="logo-container">
-    <img src="rubio_logo.png" alt="Rubios Shooting Academy logo">
+    <img src="rubio_logo.png" alt="Rubios Shooting Academy logo" />
   </div>
-  <div class="site-title">Rubios Shooting Academy</div>
-  <a href="tel:+15208403027" class="call-btn-header">Call Now</a>
   <nav>
     <div class="menu-toggle" id="mobile-menu">
       <span></span>
@@ -338,11 +285,12 @@
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#instructors">Instructors</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="tel:+15208403027">Call Now</a></li>
     </ul>
   </nav>
 </header>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <section class="hero">
   <div class="hero-top">
     <h1>Safety-first firearms training for beginners to advanced learners.</h1>
@@ -351,7 +299,7 @@
   </div>
 </section>
 
-<!-- COMMON ISSUES (Bigger, highlighted card) -->
+<!-- COMMON ISSUES HIGHLIGHT -->
 <section class="common-issues-highlight">
   <div class="issues-card">
     <h2>Common Gun Issues</h2>
@@ -367,18 +315,7 @@
   </div>
 </section>
 
-<section class="solutions">
-  <h2>Common Solutions</h2>
-  <div class="solutions-grid">
-    <div class="card">Regular cleaning and lubrication of the firearm.</div>
-    <div class="card">Check ammo quality and firearm condition before shooting.</div>
-    <div class="card">Proper magazine maintenance and replacement if worn.</div>
-    <div class="card">Store firearms in dry conditions and apply protective oils.</div>
-    <div class="card">Tighten and verify all screws and sight adjustments.</div>
-  </div>
-</section>
-
-<!-- SERVICES -->
+<!-- SERVICES SECTION -->
 <section id="services" class="services">
   <div class="content">
     <h2>Services</h2>
@@ -406,7 +343,7 @@
   </div>
 </section>
 
-<!-- GALLERY -->
+<!-- GALLERY SECTION -->
 <section id="gallery" class="gallery">
   <div class="content">
     <h2>Training Gallery</h2>
@@ -422,7 +359,7 @@
   </div>
 </section>
 
-<!-- INSTRUCTORS -->
+<!-- INSTRUCTORS SECTION -->
 <section id="instructors" class="instructors">
   <div class="content">
     <h2>Meet the Instructor</h2>
@@ -439,7 +376,7 @@
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ SECTION -->
 <section id="faq" class="faq">
   <h2>FAQ</h2>
   <div class="card">
@@ -454,26 +391,27 @@
 </footer>
 
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-// Fade-in cards
-const cards = document.querySelectorAll('.card');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){ entry.target.classList.add('show'); }
+  // Fade-in cards and gallery images
+  const cards = document.querySelectorAll('.card');
+  const galleryImages = document.querySelectorAll('.gallery-grid img');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+  cards.forEach(card => observer.observe(card));
+  galleryImages.forEach(img => observer.observe(img));
+
+  // Hamburger menu toggle
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
   });
-},{threshold:0.2});
-cards.forEach(card => observer.observe(card));
-
-// Fade-in gallery images
-const galleryImages = document.querySelectorAll('.gallery-grid img');
-galleryImages.forEach(img => observer.observe(img));
-
-// Hamburger toggle
-const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-menuToggle.addEventListener('click', ()=> navLinks.classList.toggle('active'));
 </script>
 </body>
 </html>
-
