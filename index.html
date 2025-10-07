@@ -18,26 +18,23 @@
   }
 
   /* HEADER */
-  header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:12px 24px;
-    position:fixed;
-    width:100%;
-    top:0;
-    background:rgba(0,0,0,0.6);
-    z-index:1000;
-  }
-  header img{height:48px}
-  nav { display: flex; align-items:center; }
-  .nav-links {
-    display: flex;
-    gap: 16px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+  header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0; /* remove horizontal padding */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+header img {
+  height: 48px;
+  width: auto;
+  margin-left: 0; /* ensure no extra spacing */
+}
   .nav-links li a {
     color: #f4f6f8;
     text-decoration: none;
@@ -368,5 +365,6 @@
 </script>
 </body>
 </html>
+
 
 
