@@ -6,10 +6,15 @@
 <title>Rubios Shooting Academy — Call Now</title>
 <meta name="description" content="Rubios Shooting Academy offers safety-first courses and cleaning services with 10+ years of experience. Call to learn more." />
 <style>
-:root { --accent:#0b5; --dark:#f4f6f8; --muted:#ccc; --card:#1a1a1a; }
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body {
+:root {
+  --accent:#0b5;
+  --dark:#f4f6f8;
+  --muted:#ccc;
+  --card:#1a1a1a;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
   color: var(--dark);
@@ -20,8 +25,8 @@ body {
 /* HEADER */
 header {
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
   padding:8px 24px;
   position:fixed;
   width:100%;
@@ -29,112 +34,67 @@ header {
   background: rgba(0,0,0,0.6);
   z-index:1000;
 }
-
-.logo-container img { height:64px; width:auto; }
-.header-title {
-  flex:1;
-  text-align:center;
-  font-weight:bold;
-  font-size:1.5rem;
-  color:#f4f6f8;
-}
-.header-call {
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-.header-call a.call-btn {
-  display:inline-block;
+.logo-container img{height:64px;}
+.header-title{flex:1;text-align:center;font-weight:bold;font-size:1.5rem;color:#f4f6f8;}
+.header-call a.call-btn{
   background:var(--accent);
   color:#002;
   padding:10px 16px;
-  font-size:14px;
   font-weight:600;
   border-radius:12px;
   text-decoration:none;
 }
-
-/* NAVIGATION */
-nav {
-  display:flex;
-  align-items:center;
-  gap:24px;
-}
-.nav-links {
+nav{display:flex;align-items:center;}
+.nav-links{
   display:flex;
   gap:16px;
   list-style:none;
-  margin:0;
-  padding:0;
+  margin:0;padding:0;
 }
-.nav-links li a {
-  color:#f4f6f8;
-  text-decoration:none;
-  font-weight:600;
-}
-.menu-toggle {
-  display:none;
-  flex-direction:column;
-  cursor:pointer;
-  gap:4px;
-}
-.menu-toggle span {
-  width:25px;
-  height:3px;
-  background:#f4f6f8;
-  display:block;
-}
+.nav-links li a{color:#f4f6f8;text-decoration:none;font-weight:600;}
+.menu-toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;}
+.menu-toggle span{width:25px;height:3px;background:#f4f6f8;display:block;}
 
-/* HERO + COMMON ISSUES */
-.hero {
-  position:relative;
+/* HERO + ISSUES */
+.hero{
   min-height:100vh;
   display:flex;
   flex-direction:column;
-  justify-content:flex-start;
   align-items:center;
+  justify-content:flex-start;
   text-align:center;
-  background:
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url("range_image.JPG") no-repeat center center fixed;
+  background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("range_image.JPG") no-repeat center center fixed;
   background-size:cover;
   padding:120px 24px 60px;
   color:#f4f6f8;
-  overflow:visible;
 }
+.hero-top h1{font-size:2rem;margin-bottom:12px;}
+.hero-top p{font-size:1.1rem;margin-bottom:16px;}
+.hero-top .call-btn{margin-bottom:32px;padding:12px 20px;font-size:16px;font-weight:600;border-radius:12px;background:var(--accent);color:#002;text-decoration:none;}
 
-.issues-container {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+.issues-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:20px;
   width:100%;
   max-width:1200px;
-  padding:0 12px;
   margin-top:40px;
 }
-
-.issue-card {
+.issue-card{
   background: rgba(26,26,26,0.85);
-  color: var(--dark);
   padding:20px;
   border-radius:16px;
   box-shadow:0 8px 24px rgba(0,0,0,0.7);
-  flex:1 1 250px;
-  max-width:350px;
   text-align:left;
-  transition:transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.issue-card:hover {
-  transform:translateY(-5px);
-  box-shadow:0 12px 28px rgba(0,0,0,0.8);
-}
-.issue-card h3 { margin-bottom:12px; font-size:1.1rem; }
-.issue-card p { margin-bottom:8px; }
-.issue-card a { color:var(--accent); text-decoration:underline; }
+.issue-card:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(0,0,0,0.8);}
+.issue-card h3{margin-bottom:12px;font-size:1.2rem;}
+.issue-card p{margin-bottom:8px;}
+.issue-card a{color:var(--accent);text-decoration:underline;}
 
-/* OTHER SECTIONS (Services, Gallery, Instructors, FAQ) */
-.card {
+/* OTHER SECTIONS */
+.card{
   background: var(--card);
   color: var(--dark);
   padding: 20px;
@@ -145,77 +105,51 @@ nav {
   transform:translateY(40px);
   transition:opacity 0.8s ease, transform 0.8s ease;
 }
-.card.show { opacity:1; transform:translateY(0); }
-
-.services { background:#070707; color:#f4f6f8; padding:80px 24px; display:flex; flex-direction:column; align-items:center; }
-.services .content { max-width:1200px; width:100%; text-align:center; }
-.service-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px; width:100%; }
-.service-grid .card { padding:22px; box-shadow:0 6px 18px rgba(0,0,0,0.6); }
-.service-grid .card:hover { transform:translateY(-6px); box-shadow:0 10px 28px rgba(0,0,0,0.75); }
-
-.gallery { background:#000; color:#f4f6f8; padding:80px 24px; display:flex; flex-direction:column; align-items:center; }
-.gallery .content { max-width:1200px; width:100%; text-align:center; }
-.gallery-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px; width:100%; }
-.gallery-grid img { width:100%; height:280px; object-fit:cover; border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,0.6); opacity:0; transform:translateY(30px); transition:transform 0.3s ease, box-shadow 0.3s ease; }
-.gallery-grid img.show { opacity:1; transform:translateY(0); }
-
-.instructors {
-  position: relative;
-  min-height:100vh;
-  background: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.6) 100%), url("finaldessert.png") no-repeat center center;
-  background-size:cover;
-  background-attachment:fixed;
-  color:#f4f6f8;
+.card.show{opacity:1;transform:translateY(0);}
+.services, .gallery, .instructors, .faq{
+  padding:80px 24px;
   display:flex;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
+  width:100%;
 }
-.instructors .content { width:100%; max-width:1100px; padding:60px 24px; }
-.instructors .card { display:flex; gap:12px; align-items:center; }
-.instructor img { width:84px; height:84px; border-radius:10px; object-fit:cover; object-position:top; }
-
-.faq { background:#000; color:#f4f6f8; padding:60px 24px; max-width:1100px; margin:0 auto; }
-.small { font-size:13px; color:var(--muted); }
-h2 { color:#f4f6f8; margin-bottom:20px; }
-footer { margin-top:0; padding:18px 0; border-top:1px solid #111; color:var(--muted); font-size:13px; text-align:center; }
+.services .content, .gallery .content, .instructors .content{max-width:1200px;width:100%;text-align:center;}
+.service-grid, .gallery-grid{display:grid;gap:20px;width:100%;}
+.service-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+.gallery-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+.gallery-grid img{width:100%;height:280px;object-fit:cover;border-radius:14px;box-shadow:0 4px 12px rgba(0,0,0,0.6);opacity:0;transform:translateY(30px);transition:0.3s;}
+.gallery-grid img.show{opacity:1;transform:translateY(0);}
+.instructors{background:linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.6)), url("finaldessert.png") no-repeat center center; background-size:cover;background-attachment:fixed;color:#f4f6f8;}
+.instructors .card{display:flex;gap:12px;align-items:center;}
+.instructor img{width:84px;height:84px;border-radius:10px;object-fit:cover;}
+.faq{max-width:1100px;margin:0 auto;}
+.small{font-size:13px;color:var(--muted);}
+h2{color:#f4f6f8;margin-bottom:20px;}
+footer{margin-top:0;padding:18px 0;border-top:1px solid #111;color:var(--muted);font-size:13px;text-align:center;}
 
 /* MEDIA QUERIES */
 @media(max-width:900px){
-  .instructors .card { flex-direction:column; align-items:flex-start; }
-  .header-title { font-size:1.2rem; }
-  .header-call a.call-btn { font-size:12px; padding:8px 12px; }
+  .instructors .card{flex-direction:column;align-items:flex-start;}
+  .header-title{font-size:1.2rem;}
+  .header-call a.call-btn{font-size:12px;padding:8px 12px;}
 }
 @media(max-width:700px){
-  .nav-links {
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    background: rgba(0,0,0,0.95);
-    flex-direction:column;
-    align-items:center;
-    display:none;
-  }
-  .nav-links.active { display:flex; }
-  .nav-links li { margin:12px 0; }
-  .menu-toggle { display:flex; }
-  .hero { background-attachment:scroll; background-size:cover; }
+  .nav-links{position:absolute;top:100%;left:0;width:100%;background: rgba(0,0,0,0.95);flex-direction:column;align-items:center;display:none;}
+  .nav-links.active{display:flex;}
+  .nav-links li{margin:12px 0;}
+  .menu-toggle{display:flex;}
+  .hero{background-attachment:scroll;background-size:cover;}
 }
 </style>
 </head>
 <body>
 <header>
-  <div class="logo-container">
-    <img src="rubio_logo.png" alt="Rubios Shooting Academy logo" />
-  </div>
+  <div class="logo-container"><img src="rubio_logo.png" alt="Rubios Shooting Academy logo" /></div>
   <div class="header-title">Rubios Shooting Academy</div>
   <div class="header-call">
     <a href="tel:+15208403027" class="call-btn">Call Now</a>
     <nav>
-      <div class="menu-toggle" id="mobile-menu">
-        <span></span><span></span><span></span>
-      </div>
+      <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -226,61 +160,31 @@ footer { margin-top:0; padding:18px 0; border-top:1px solid #111; color:var(--mu
   </div>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO + ISSUES -->
 <section class="hero">
+  <div class="hero-top">
+    <h1>Safety-first firearms training for beginners to advanced learners.</h1>
+    <p>Hands-on classes, private coaching, and cleaning services.</p>
+    <a href="tel:+15208403027" class="call-btn">Call Now: +1 (520) 840-3027</a>
+  </div>
   <div class="issues-container">
-    <div class="issue-card">
-      <h3>Failure to feed rounds</h3>
-      <p>Often caused by dirty magazines or worn springs. Regular cleaning and inspection solve this.</p>
-      <p>See our <a href="#services">services</a> for help.</p>
-    </div>
-    <div class="issue-card">
-      <h3>Misfires or light primer strikes</h3>
-      <p>Can result from faulty ammo or firing pin issues. Check ammo quality and have a gunsmith inspect if needed.</p>
-      <p>See our <a href="#services">services</a> for help.</p>
-    </div>
-    <div class="issue-card">
-      <h3>Jammed magazines</h3>
-      <p>Dirt or improper loading can cause jams. Clean and rotate magazines regularly.</p>
-      <p>See our <a href="#services">services</a> for help.</p>
-    </div>
-    <div class="issue-card">
-      <h3>Rust or corrosion</h3>
-      <p>Exposure to moisture leads to rust. Apply protective oils and store guns dry.</p>
-      <p>See our <a href="#services">services</a> for help.</p>
-    </div>
-    <div class="issue-card">
-      <h3>Loose sights or optics</h3>
-      <p>Vibrations and handling can loosen screws. Tighten regularly and check before shooting.</p>
-      <p>See our <a href="#services">services</a> for help.</p>
-    </div>
+    <div class="issue-card"><h3>Failure to feed rounds</h3><p>Often caused by dirty magazines or worn springs. Regular cleaning and inspection solve this.</p><p>See our <a href="#services">services</a> for help.</p></div>
+    <div class="issue-card"><h3>Misfires or light primer strikes</h3><p>Can result from faulty ammo or firing pin issues. Check ammo quality and have a gunsmith inspect if needed.</p><p>See our <a href="#services">services</a> for help.</p></div>
+    <div class="issue-card"><h3>Jammed magazines</h3><p>Dirt or improper loading can cause jams. Clean and rotate magazines regularly.</p><p>See our <a href="#services">services</a> for help.</p></div>
+    <div class="issue-card"><h3>Rust or corrosion</h3><p>Exposure to moisture leads to rust. Apply protective oils and store guns dry.</p><p>See our <a href="#services">services</a> for help.</p></div>
+    <div class="issue-card"><h3>Loose sights or optics</h3><p>Vibrations and handling can loosen screws. Tighten regularly and check before shooting.</p><p>See our <a href="#services">services</a> for help.</p></div>
   </div>
 </section>
 
-<!-- SERVICES, GALLERY, INSTRUCTORS, FAQ (same as previous code) -->
+<!-- SERVICES, GALLERY, INSTRUCTORS, FAQ -->
 <section id="services" class="services">
   <div class="content">
     <h2>Services</h2>
     <p class="small">Range services and training tailored for new and experienced shooters.</p>
     <div class="service-grid">
-      <div class="card">
-        <h3>Private One-on-One — Basic Performance</h3>
-        <p>Individual coaching to improve accuracy, stance, and trigger control. Personalized drills and focused feedback.</p>
-        <p class="small">Ideal if you want fast, hands-on improvement.</p>
-        <p><strong>From $80 / hour · Call to schedule</strong></p>
-      </div>
-      <div class="card">
-        <h3>Safety Class</h3>
-        <p>Step-by-step safety training: safe handling, storage, clearing malfunctions, and basic firearm operation.</p>
-        <p class="small">Great for new owners or anyone who wants a confident safety foundation.</p>
-        <p><strong>Group & private options · Call for pricing</strong></p>
-      </div>
-      <div class="card">
-        <h3>Firearm Cleaning Service</h3>
-        <p>Professional deep clean and inspection to keep your firearm reliable and safe.</p>
-        <p class="small">Includes lubrication and basic function check.</p>
-        <p><strong>$40 per firearm</strong></p>
-      </div>
+      <div class="card"><h3>Private One-on-One — Basic Performance</h3><p>Individual coaching to improve accuracy, stance, and trigger control. Personalized drills and focused feedback.</p><p class="small">Ideal if you want fast, hands-on improvement.</p><p><strong>From $80 / hour · Call to schedule</strong></p></div>
+      <div class="card"><h3>Safety Class</h3><p>Step-by-step safety training: safe handling, storage, clearing malfunctions, and basic firearm operation.</p><p class="small">Great for new owners or anyone who wants a confident safety foundation.</p><p><strong>Group & private options · Call for pricing</strong></p></div>
+      <div class="card"><h3>Firearm Cleaning Service</h3><p>Professional deep clean and inspection to keep your firearm reliable and safe.</p><p class="small">Includes lubrication and basic function check.</p><p><strong>$40 per firearm</strong></p></div>
     </div>
   </div>
 </section>
@@ -290,12 +194,12 @@ footer { margin-top:0; padding:18px 0; border-top:1px solid #111; color:var(--mu
     <h2>Training Gallery</h2>
     <p class="small">A glimpse into our range sessions and training.</p>
     <div class="gallery-grid">
-      <img src="rubiotraining.png" alt="Students practicing stance" />
-      <img src="rubio_self.png" alt="Instructor demonstrating safety technique" />
-      <img src="rubio_shotgun.png" alt="Live fire exercise" />
-      <img src="rubio_shooting_practice.jpeg" alt="Group photo after training" />
-      <img src="shotgun_smoke.png" alt="Handgun fundamentals session" />
-      <img src="full_team.png" alt="Range safety briefing" />
+      <img loading="lazy" src="rubiotraining.png" alt="Students practicing stance" />
+      <img loading="lazy" src="rubio_self.png" alt="Instructor demonstrating safety technique" />
+      <img loading="lazy" src="rubio_shotgun.png" alt="Live fire exercise" />
+      <img loading="lazy" src="rubio_shooting_practice.jpeg" alt="Group photo after training" />
+      <img loading="lazy" src="shotgun_smoke.png" alt="Handgun fundamentals session" />
+      <img loading="lazy" src="full_team.png" alt="Range safety briefing" />
     </div>
   </div>
 </section>
@@ -304,14 +208,8 @@ footer { margin-top:0; padding:18px 0; border-top:1px solid #111; color:var(--mu
   <div class="content">
     <h2>Meet the Instructor</h2>
     <div class="card">
-      <div class="instructor">
-        <img src="rubio_shotgun.png" alt="Instructor Rubio Fimbres">
-      </div>
-      <div>
-        <strong>Rubio Fimbres</strong>
-        <div class="small">Over 10 years of shooting and range experience</div>
-        <p class="small">Dedicated to helping new shooters build safe and confident firearm skills.</p>
-      </div>
+      <div class="instructor"><img src="rubio_shotgun.png" alt="Instructor Rubio Fimbres"></div>
+      <div><strong>Rubio Fimbres</strong><div class="small">Over 10 years of shooting and range experience</div><p class="small">Dedicated to helping new shooters build safe and confident firearm skills.</p></div>
     </div>
   </div>
 </section>
@@ -325,29 +223,21 @@ footer { margin-top:0; padding:18px 0; border-top:1px solid #111; color:var(--mu
   </div>
 </section>
 
-<footer>
-  © <span id="year"></span> Rubios Shooting Academy — All rights reserved
-</footer>
+<footer>© <span id="year"></span> Rubios Shooting Academy — All rights reserved</footer>
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Fade-in cards and gallery images
-const cards = document.querySelectorAll('.card');
-const galleryImages = document.querySelectorAll('.gallery-grid img');
-const issues = document.querySelectorAll('.issue-card');
+// Fade-in observer
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('show'); }});
-}, { threshold:0.2 });
-cards.forEach(card => observer.observe(card));
-galleryImages.forEach(img => observer.observe(img));
-issues.forEach(issue => observer.observe(issue));
+  entries.forEach(entry=>{if(entry.isIntersecting) entry.target.classList.add('show');});
+},{threshold:0.2});
+document.querySelectorAll('.card, .issue-card, .gallery-grid img').forEach(el=>observer.observe(el));
 
-// Hamburger menu toggle
-const menuToggle = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+// Mobile menu
+document.getElementById('mobile-menu').addEventListener('click',()=>{
+  document.querySelector('.nav-links').classList.toggle('active');
+});
 </script>
 </body>
 </html>
-
