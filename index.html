@@ -20,9 +20,9 @@
   /* HEADER */
   header {
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* aligns items to bottom of header */
   justify-content: space-between;
-  padding: 12px 0; /* remove horizontal padding */
+  padding: 8px 0; /* vertical padding */
   position: fixed;
   width: 100%;
   top: 0;
@@ -31,9 +31,10 @@
 }
 
 header img {
-  height: 48px;
+  height: 64px;  /* increase size */
   width: auto;
-  margin-left: 0; /* ensure no extra spacing */
+  margin-left: 0; /* flush left */
+  margin-bottom: 4px; /* small spacing from bottom */
 }
   .nav-links li a {
     color: #f4f6f8;
@@ -365,6 +366,7 @@ header img {
 </script>
 </body>
 </html>
+
 
 
 
