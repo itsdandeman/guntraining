@@ -40,7 +40,8 @@
 
   /* HERO SECTION */
   .hero {
-    min-height: auto;
+    position: relative;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -48,11 +49,13 @@
     text-align: center;
     background:
       linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-      url("range_image.JPG") no-repeat center top fixed;
+      url("range_image.JPG") no-repeat center center fixed;
     background-size: cover;
     padding: 100px 24px 60px;
     color:#f4f6f8;
-  }
+    overflow: visible;
+}
+
 
   .hero-top h1 { font-size: 2rem; margin-bottom: 12px; }
   .hero-top p { font-size: 1.1rem; margin-bottom: 16px; }
@@ -69,15 +72,17 @@
   }
 
   /* COMMON ISSUES AS SEPARATE CARDS */
-  .issues-container {
+    .issues-container {
+    position: absolute;
+    bottom: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     width: 100%;
     max-width: 1200px;
-    margin-top: 20px;
-  }
+    padding: 0 12px;
+}
 
   .issue-card {
     background: rgba(26,26,26,0.85);
@@ -344,3 +349,4 @@
 </script>
 </body>
 </html>
+
