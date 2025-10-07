@@ -88,33 +88,69 @@
   }
 
   /* HERO SECTION */
-  .hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:
-      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-      url("range_image.JPG") no-repeat center center fixed;
-    background-size:cover;
-    padding:0 24px;
-    color:#f4f6f8;
-    margin-top:80px;
-  }
-  .hero h1{font-size:48px;margin-bottom:16px}
-  .hero p{font-size:20px;max-width:700px;margin:0 auto 24px;color:var(--muted)}
-  .hero .call-btn{
-    display:inline-block;
-    background:var(--accent);
-    color:#002;
-    padding:16px 24px;
-    font-size:20px;
-    font-weight:600;
-    border-radius:12px;
-    text-decoration:none;
-  }
+  .hero {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* top align */
+  align-items: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("range_image.JPG") no-repeat center top fixed;
+  background-size: cover;
+  padding: 24px 24px 80px; /* top padding */
+  color:#f4f6f8;
+}
+  .hero-top h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+  .hero-top p {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+  .hero .call-btn {
+  margin-bottom: 24px;
+}
+
+  .common-issues-highlight {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  background: #111;
+}
+
+.issues-card {
+  background: var(--card);
+  color: var(--dark);
+  padding: 32px;
+  border-radius: 16px;
+  max-width: 1000px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+}
+
+.issues-card h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.issues-card ul {
+  text-align: left;
+  margin: 16px 0;
+  padding-left: 20px;
+}
+
+.issues-card ul li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.issues-card a {
+  color: var(--accent);
+  text-decoration: underline;
+}
 
   /* CARDS & GENERAL SECTIONS */
   .card{
@@ -308,20 +344,26 @@
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Safety-first firearms training for beginners to advanced learners.</h1>
-  <p>Hands-on classes, private coaching, and cleaning services.</p>
-  <a href="tel:+15208403027" class="call-btn">Call Now: +1 (520) 840-3027</a>
+  <div class="hero-top">
+    <h1>Safety-first firearms training for beginners to advanced learners.</h1>
+    <p>Hands-on classes, private coaching, and cleaning services.</p>
+    <a href="tel:+15208403027" class="call-btn">Call Now: +1 (520) 840-3027</a>
+  </div>
 </section>
 
-<!-- COMMON ISSUES -->
-<section class="issues">
-  <h2>Common Gun Issues</h2>
-  <div class="issues-grid">
-    <div class="card">Failure to feed rounds properly.</div>
-    <div class="card">Misfires or light primer strikes.</div>
-    <div class="card">Jammed magazines.</div>
-    <div class="card">Rust or corrosion on metal parts.</div>
-    <div class="card">Loose sights or optics.</div>
+<!-- COMMON ISSUES (Bigger, highlighted card) -->
+<section class="common-issues-highlight">
+  <div class="issues-card">
+    <h2>Common Gun Issues</h2>
+    <p>Understanding common firearm issues helps you stay safe and avoid range downtime. Here are a few we see frequently:</p>
+    <ul>
+      <li><strong>Failure to feed rounds properly:</strong> Often caused by dirty magazines or worn springs. Regular cleaning and inspection solve this.</li>
+      <li><strong>Misfires or light primer strikes:</strong> Can result from faulty ammo or firing pin issues. Always check ammo quality and have a gunsmith inspect if needed.</li>
+      <li><strong>Jammed magazines:</strong> Dirt or improper loading can cause jams. Clean and rotate magazines regularly.</li>
+      <li><strong>Rust or corrosion:</strong> Exposure to moisture leads to rust. Apply protective oils and store guns dry.</li>
+      <li><strong>Loose sights or optics:</strong> Vibrations and handling can loosen screws. Tighten regularly and check before shooting.</li>
+    </ul>
+    <p>For all of these, our <a href="#services">services</a> can help keep your firearm in top condition.</p>
   </div>
 </section>
 
@@ -434,3 +476,4 @@ menuToggle.addEventListener('click', ()=> navLinks.classList.toggle('active'));
 </script>
 </body>
 </html>
+
