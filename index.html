@@ -86,7 +86,7 @@
       linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
       url("range_image.JPG") no-repeat center top fixed;
     background-size: cover;
-    padding: 100px 24px 40px;
+    padding: 100px 24px 60px;
     color:#f4f6f8;
   }
 
@@ -110,21 +110,16 @@
     margin-bottom:24px;
   }
 
-  /* COMMON ISSUES HIGHLIGHT */
-  .common-issues-highlight {
-    display: flex;
-    justify-content: center;
-    padding: 24px;
-    background: #111;
-  }
-
+  /* COMMON ISSUES CARD INSIDE HERO */
   .issues-card {
-    background: var(--card);
+    background: rgba(26,26,26,0.85);
     color: var(--dark);
     padding: 32px;
     border-radius: 16px;
     max-width: 1000px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+    margin-top: 32px;
+    text-align: left;
   }
 
   .issues-card h2 {
@@ -133,7 +128,6 @@
   }
 
   .issues-card ul {
-    text-align: left;
     margin: 16px 0;
     padding-left: 20px;
   }
@@ -290,17 +284,15 @@
   </nav>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HERO + COMMON ISSUES -->
 <section class="hero">
   <div class="hero-top">
     <h1>Safety-first firearms training for beginners to advanced learners.</h1>
     <p>Hands-on classes, private coaching, and cleaning services.</p>
     <a href="tel:+15208403027" class="call-btn">Call Now: +1 (520) 840-3027</a>
   </div>
-</section>
 
-<!-- COMMON ISSUES HIGHLIGHT -->
-<section class="common-issues-highlight">
+  <!-- COMMON ISSUES INSIDE HERO -->
   <div class="issues-card">
     <h2>Common Gun Issues</h2>
     <p>Understanding common firearm issues helps you stay safe and avoid range downtime. Here are a few we see frequently:</p>
@@ -415,3 +407,4 @@
 </script>
 </body>
 </html>
+
