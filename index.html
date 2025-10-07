@@ -12,7 +12,6 @@
     --muted:#ccc;
     --card:#1a1a1a;
   }
-
   *{ box-sizing:border-box; }
   html{ scroll-behavior: smooth; }
   body {
@@ -25,35 +24,40 @@
 
   /* HEADER */
   header {
-    display: flex;
+    display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 24px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: 1000;
+    padding:8px 16px;
+    position:fixed;
+    width:100%;
+    top:0;
+    background: rgba(0,0,0,0.7);
+    z-index:1000;
+    flex-wrap:wrap;
   }
 
   .logo-container {
-    display:flex; align-items:flex-end;
+    display:flex; align-items:center;
   }
-  .logo-container img { height:64px; width:auto; }
-  nav { display:flex; align-items:center; gap:24px; }
+  .logo-container img { height:50px; width:auto; margin-right:12px; }
+  .logo-container h1 { font-size:1.5rem; margin:0; color:#f4f6f8; }
+
+  nav { display:flex; align-items:center; gap:16px; }
   .nav-links {
-    display:flex; gap:16px; list-style:none; margin:0; padding:0;
+    display:flex; gap:12px; list-style:none; margin:0; padding:0;
   }
   .nav-links li a {
     color:#f4f6f8; text-decoration:none; font-weight:600;
+    padding:6px 10px; border-radius:6px; transition: background 0.2s;
   }
+  .nav-links li a:hover { background: rgba(255,255,255,0.1); }
   .menu-toggle { display:none; flex-direction:column; cursor:pointer; gap:4px; }
   .menu-toggle span { width:25px; height:3px; background:#f4f6f8; display:block; }
 
-  /* HERO SECTION */
+  /* HERO */
   .hero {
-    position: relative;
-    min-height: 100vh;
+    position:relative;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
@@ -63,13 +67,13 @@
       linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
       url("range_image.JPG") no-repeat center center fixed;
     background-size:cover;
-    padding: 120px 24px 60px;
+    padding:120px 16px 60px;
     color:#f4f6f8;
-    overflow: visible;
+    overflow:visible;
   }
 
   .hero-top h1 { font-size:2rem; margin-bottom:12px; }
-  .hero-top p { font-size:1.1rem; margin-bottom:16px; }
+  .hero-top p { font-size:1.1rem; margin-bottom:16px; line-height:1.5; }
   .hero .call-btn {
     display:inline-block;
     background:var(--accent);
@@ -82,17 +86,16 @@
     margin-bottom:32px;
   }
 
-  /* COMMON ISSUES CARDS */
+  /* COMMON ISSUES */
   .issues-container {
     display:grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5,1fr);
     gap:20px;
     width:100%;
     max-width:1400px;
-    margin-top:50px;
+    margin-top:40px;
     padding:0 12px;
   }
-
   .issue-card {
     background: rgba(26,26,26,0.85);
     padding:30px;
@@ -106,86 +109,69 @@
     transform: translateY(-6px);
     box-shadow: 0 12px 36px rgba(0,0,0,0.8);
   }
-  .issue-card h3 { margin-bottom:12px; font-size:1.1rem; }
+  .issue-card h3 { margin-bottom:12px; font-size:1.2rem; }
   .issue-card p { margin-bottom:8px; }
   .issue-card a { color: var(--accent); text-decoration: underline; }
 
-  /* CARDS & GENERAL SECTIONS */
+  /* GENERAL CARDS */
   .card {
     background: var(--card);
     color: var(--dark);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.5);
     margin-bottom:20px;
     opacity:0;
-    transform: translateY(40px);
+    transform:translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
   }
-  .card.show { opacity:1; transform: translateY(0); }
+  .card.show { opacity:1; transform:translateY(0); }
 
   /* SERVICES */
-  .services { background:#070707; color:#f4f6f8; padding:80px 24px; display:flex; flex-direction:column; align-items:center; }
+  .services { background:#070707; color:#f4f6f8; padding:60px 16px; display:flex; flex-direction:column; align-items:center; }
   .services .content { max-width:1200px; width:100%; text-align:center; }
-  .services h2 { font-size:2.1rem; margin-bottom:12px; }
-  .services .small { color: var(--muted); margin-bottom:28px; }
-  .service-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:20px; width:100%; }
-  .service-grid .card { padding:22px; box-shadow:0 6px 18px rgba(0,0,0,0.6); }
-  .service-grid .card:hover { transform: translateY(-6px); box-shadow:0 10px 28px rgba(0,0,0,0.75); }
+  .services h2 { font-size:2rem; margin-bottom:12px; }
+  .services .small { color:var(--muted); margin-bottom:28px; }
+  .service-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:20px; width:100%; }
+  .service-grid .card { padding:22px; }
+  .service-grid .card:hover { transform:translateY(-6px); box-shadow:0 10px 28px rgba(0,0,0,0.75); }
 
   /* GALLERY */
-  .gallery { background:#000; color:#f4f6f8; padding:80px 24px; display:flex; flex-direction:column; align-items:center; }
+  .gallery { background:#000; color:#f4f6f8; padding:60px 16px; display:flex; flex-direction:column; align-items:center; }
   .gallery .content { max-width:1200px; width:100%; text-align:center; }
-  .gallery h2 { font-size:2.2rem; margin-bottom:12px; }
+  .gallery h2 { font-size:2rem; margin-bottom:12px; }
   .gallery p.small { margin-bottom:40px; color:var(--muted); }
-  .gallery-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:20px; width:100%; }
-  .gallery-grid img { width:100%; height:280px; object-fit: cover; border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,0.6); opacity:0; transform: translateY(30px); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-  .gallery-grid img.show { opacity:1; transform: translateY(0); }
-  .gallery-grid img:hover { transform: scale(1.04); box-shadow:0 6px 18px rgba(0,0,0,0.8); }
+  .gallery-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:20px; width:100%; }
+  .gallery-grid img { width:100%; height:220px; object-fit:cover; border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,0.6); opacity:0; transform:translateY(30px); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .gallery-grid img.show { opacity:1; transform:translateY(0); }
+  .gallery-grid img:hover { transform:scale(1.04); box-shadow:0 6px 18px rgba(0,0,0,0.8); }
 
   /* INSTRUCTORS */
-  .instructors {
-    position: relative;
-    min-height:100vh;
-    background:
-      linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.6) 100%),
-      url("finaldessert.png") no-repeat center center;
-    background-size:cover;
-    background-attachment: fixed;
-    color:#f4f6f8;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-  }
-  .instructors .content { width:100%; max-width:1100px; padding:60px 24px; }
-  .instructors .card { display:flex; gap:12px; align-items:center; }
+  .instructors { position:relative; min-height:100vh; background: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.6) 100%), url("finaldessert.png") no-repeat center center; background-size:cover; background-attachment: fixed; color:#f4f6f8; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+  .instructors .content { width:100%; max-width:1100px; padding:60px 16px; }
+  .instructors .card { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
   .instructor img { width:84px; height:84px; border-radius:10px; object-fit:cover; object-position:top; }
 
   /* FAQ */
-  .faq { background:#000; color:#f4f6f8; padding:60px 24px; max-width:1100px; margin:0 auto; }
+  .faq { background:#000; color:#f4f6f8; padding:60px 16px; max-width:1100px; margin:0 auto; }
 
-  .small { font-size:13px; color:var(--muted); }
-  h2 { color:#f4f6f8; margin-bottom:20px; }
   footer { margin-top:0; padding:18px 0; border-top:1px solid #111; color:var(--muted); font-size:13px; text-align:center; }
 
-  /* RESPONSIVE */
-  @media(max-width:1200px){ .issues-container { grid-template-columns: repeat(3, 1fr); } }
-  @media(max-width:900px){ .issues-container { grid-template-columns: repeat(2, 1fr); } }
+  /* RESPONSIVE GRID FOR ISSUES */
+  @media(max-width:1200px){ .issues-container { grid-template-columns: repeat(3,1fr); } }
+  @media(max-width:900px){ .issues-container { grid-template-columns: repeat(2,1fr); } }
   @media(max-width:600px){ .issues-container { grid-template-columns: 1fr; } }
 
-  @media(max-width:900px){ .instructors .card{ flex-direction:column; align-items:flex-start; } .hero-top h1{ font-size:1.5rem; } .hero-top p{ font-size:1rem; } }
+  /* MOBILE HEADER & NAV */
   @media(max-width:700px){
-    .service-grid .card { padding:18px; }
-    .gallery-grid img { height:220px; }
-    .gallery-grid { grid-template-columns:1fr; }
-
+    .logo-container { width:100%; justify-content:center; margin-bottom:8px; }
     .nav-links { position:absolute; top:100%; left:0; width:100%; background: rgba(0,0,0,0.95); flex-direction:column; align-items:center; display:none; }
     .nav-links.active { display:flex; }
     .nav-links li { margin:12px 0; }
     .menu-toggle { display:flex; }
-
-    .hero { background-attachment:scroll; background-size:cover; }
+    .hero-top h1{ font-size:1.5rem; }
+    .hero-top p{ font-size:1rem; }
+    .hero .call-btn{ font-size:14px; padding:10px 16px; }
   }
 </style>
 </head>
@@ -194,6 +180,7 @@
 <header>
   <div class="logo-container">
     <img src="rubio_logo.png" alt="Rubios Shooting Academy logo" />
+    <h1>Rubios Shooting Academy</h1>
   </div>
   <nav>
     <div class="menu-toggle" id="mobile-menu"><span></span><span></span><span></span></div>
@@ -210,7 +197,6 @@
 <!-- HERO + COMMON ISSUES -->
 <section class="hero">
   <div class="hero-top">
-    <h1>Rubios Shooting Academy</h1>
     <p>Safety-first firearms training for beginners to advanced learners. Hands-on classes, private coaching, and cleaning services.</p>
     <a href="tel:+15208403027" class="call-btn">Call Now: +1 (520) 840-3027</a>
   </div>
@@ -272,7 +258,7 @@
   </div>
 </section>
 
-<!-- GALLERY -->
+<!-- GALLERY SECTION -->
 <section id="gallery" class="gallery">
   <div class="content">
     <h2>Training Gallery</h2>
@@ -288,7 +274,7 @@
   </div>
 </section>
 
-<!-- INSTRUCTORS -->
+<!-- INSTRUCTORS SECTION -->
 <section id="instructors" class="instructors">
   <div class="content">
     <h2>Meet the Instructor</h2>
@@ -305,7 +291,7 @@
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- FAQ SECTION -->
 <section id="faq" class="faq">
   <h2>FAQ</h2>
   <div class="card">
@@ -320,19 +306,18 @@
 </footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Fade-in cards and gallery images
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('show'); } });
-  }, { threshold:0.2 });
+// Fade-in observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('show'); });
+}, { threshold:0.2 });
+document.querySelectorAll('.card, .gallery-grid img, .issue-card').forEach(el => observer.observe(el));
 
-  document.querySelectorAll('.card, .gallery-grid img, .issue-card').forEach(el => observer.observe(el));
-
-  // Hamburger menu toggle
-  const menuToggle = document.getElementById('mobile-menu');
-  const navLinks = document.querySelector('.nav-links');
-  menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+// Hamburger menu toggle
+const menuToggle = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+menuToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
 </script>
 </body>
 </html>
